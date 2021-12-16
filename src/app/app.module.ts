@@ -3,20 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LayoutComponent } from './layout/layout.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
+import { AddorderComponent } from './addorder/addorder.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [								
     AppComponent,
-      LayoutComponent
+      SidebarComponent,
+      HeaderComponent,
+      AddorderComponent,
+      OrdersComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}

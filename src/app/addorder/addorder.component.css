@@ -1,0 +1,419 @@
+.card-section {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 15px;
+}
+
+.sectionTitle {
+    padding: 14px 20px;
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2f3542;
+}
+
+.card-section hr {
+    margin: 0;
+    color: #747d8c;
+}
+
+.form-section {
+    padding: 25px 20px;
+}
+
+.form-section .textField {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 32px;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    padding: 3px 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.part1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.part1child {
+    padding: 0 2%;
+}
+
+.verticalHr {
+    height: 77px;
+    width: 0.1em;
+    background-color: rgba(0, 0, 0, 0.17);
+}
+.part2{
+    padding-bottom: 20px;
+}
+.part2 h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+
+#Checkbox {
+    display: none;
+}
+
+#Checkbox+label {
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+    padding: 18px;
+    width: 21em;
+    margin-right: 10px;
+    background: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    cursor: pointer;
+}
+
+#Checkbox+label:hover {
+    background: #e4e4e4;
+}
+
+#Checkbox:checked+label {
+    background: #3ea868;
+    color: #f0f0f0;
+    animation: btn-color 0.5s ease-in-out;
+}
+
+.label-name {
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition-property: left;
+    -webkit-transition-duration: 1s;
+}
+
+#Checkbox:checked+label span.label-name {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+#Checkbox:checked+label div.checkmark {
+    display: block;
+    fill: #f0f0f0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    display: none;
+    stroke-width: 4;
+    fill: #f0f0f0;
+    stroke-miterlimit: 10;
+    animation: scale 0.5s ease-in-out;
+}
+
+@keyframes scale {
+    0% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.2, 1.2, 1);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes btn-color {
+    0% {
+        background: #88d3a6;
+    }
+
+    50% {
+        background: #5dc386;
+    }
+
+    100% {
+        background: #3ea868;
+    }
+}
+
+
+/* Checkbox2 */
+
+#Checkbox2 {
+    display: none;
+}
+
+#Checkbox2+label {
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+    padding: 18px;
+    width: 10em;
+    margin-right: 10px;
+    background: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    cursor: pointer;
+}
+
+#Checkbox2+label:hover {
+    background: #e4e4e4;
+}
+
+#Checkbox2:checked+label {
+    background: #3ea868;
+    color: #f0f0f0;
+    animation: btn-color 0.5s ease-in-out;
+}
+
+
+#Checkbox2:checked+label span.label-name {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+#Checkbox2:checked+label div.checkmark {
+    display: block;
+    fill: #f0f0f0;
+}
+
+/* Checkbox2 END */
+
+
+/* Checkbox3 */
+#Checkbox3 {
+    display: none;
+}
+
+#Checkbox3+label {
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+    padding: 18px;
+    width: 18.5em;
+    margin-right: 10px;
+    background: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    cursor: pointer;
+}
+
+#Checkbox3+label:hover {
+    background: #e4e4e4;
+}
+
+#Checkbox3:checked+label {
+    background: #3ea868;
+    color: #f0f0f0;
+    animation: btn-color 0.5s ease-in-out;
+}
+
+#Checkbox3:checked+label span.label-name {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#Checkbox3:checked+label div.checkmark {
+    display: block;
+    fill: #f0f0f0;
+}
+
+/* Checkbox3 END*/
+
+
+/* Checkbox4 */
+#Checkbox4 {
+    display: none;
+}
+
+#Checkbox4+label {
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+    padding: 18px;
+    width: 5.4em;
+    margin-right: 10px;
+    background: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    cursor: pointer;
+}
+
+#Checkbox4+label:hover {
+    background: #e4e4e4;
+}
+
+#Checkbox4:checked+label {
+    background: #3ea868;
+    color: #f0f0f0;
+    animation: btn-color 0.5s ease-in-out;
+}
+
+#Checkbox4:checked+label span.label-name {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#Checkbox4:checked+label div.checkmark {
+    display: block;
+    fill: #f0f0f0;
+}
+/* Checkbox4 END*/
+
+
+.part3 h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 0 0 10px 0!important;
+}
+
+.docType{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 32px;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    padding: 3px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.fa-angle-down{
+    position: absolute;
+    right: 50%;
+    margin-top: 10px;
+    color: #3ea868;
+}
+
+.file-upload {
+    display: block;
+    text-align: center;
+    font-family:    'Montserrat',  sans-serif;
+    font-size:  12px;
+}
+
+.file-upload .file-select {
+    display: block;
+    color:  #34495e;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    cursor: pointer;
+    height: 32px;
+    border-radius: 5px;
+    line-height: 32px;
+    text-align: left;
+    background: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+}
+
+.file-upload .file-select .file-select-button {
+    background: #dce4ec;
+    padding: 0 10px;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+}
+
+.file-upload .file-select .file-select-name {
+    line-height: 32px;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.file-upload .file-select:hover {
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.file-upload .file-select:hover .file-select-button {
+    background: #34495e;
+    color: #FFFFFF;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.file-upload.active .file-select {
+    border-color: #3fa46a;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.file-upload.active .file-select .file-select-button {
+    background: #3fa46a;
+    color: #FFFFFF;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.file-upload .file-select input[type=file] {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.file-upload .file-select.file-select-disabled {
+    opacity: 0.65;
+}
+
+.file-upload .file-select.file-select-disabled:hover {
+    cursor: default;
+    display: block;
+    border:  2px solid #dce4ec;
+    color:  #34495e;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+    text-align: left;
+    background: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+}
+
+.file-upload .file-select.file-select-disabled:hover .file-select-button {
+    background: #dce4ec;
+    color: #666666;
+    padding: 0 10px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.file-upload .file-select.file-select-disabled:hover .file-select-name {
+    line-height: 40px;
+    display: inline-block;
+    padding: 0 10px;
+}

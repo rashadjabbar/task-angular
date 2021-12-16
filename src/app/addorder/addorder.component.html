@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-lg-10">
+        <div class="card-section">
+            <h3 class="sectionTitle">Yeni sifariş</h3>
+            <hr>
+            <form class="form-section">
+                <div class="part1">
+                    <div class="part1child">
+                        <input type="text" class="textField" placeholder="Sənəd №">
+                        <input type="text" class="textField" placeholder="Xidmət məbləği">
+                    </div>
+                    <div class="verticalHr"></div>
+                    <div class="part1child">
+                        <input type="text" class="textField" placeholder="Müştəri adı">
+                        <input type="text" class="textField" placeholder="Sifarişin tarixi">
+                    </div>
+                    <div class="verticalHr"></div>
+                    <div class="part1child">
+                        <input type="text" class="textField" placeholder="GB №">
+                        <input type="text" class="textField" placeholder="Nəqliyyat növü">
+                    </div>
+                </div>
+                <div class="part2">
+                    <h4>Xidmətlər</h4>
+
+                    <input type="checkbox" id="Checkbox" name="Checkbox">
+                    <label for="Checkbox">
+                        <span class="label-name">Qısa idxal bəyannaməsinin yazılması</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+
+                    <input type="checkbox" id="Checkbox2" name="Checkbox2">
+                    <label for="Checkbox2">
+                        <span class="label-name">Broker xidməti</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+
+                    <input type="checkbox" id="Checkbox3" name="Checkbox3">
+                    <label for="Checkbox3">
+                        <span class="label-name">İdxal bəyannaməsinin yazılması</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+
+                    <input type="checkbox" id="Checkbox4" name="Checkbox4">
+                    <label for="Checkbox4">
+                        <span class="label-name">Digər</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+                </div>
+                <hr>
+                <div class="part3 mt-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>Sənəd növü</h4>
+                            <select class="docType" name="" id="">
+                                <option value="" selected disabled>Sənəd seçin</option>
+                                <option value="">Qısa idxal bəyannaməsi</option>
+                                <option value="">Məhsulun aktlaşdırılması</option>
+                            </select>
+                            <i class="fal fa-angle-down"></i>
+                        </div>
+                        <div class="col-6">
+                            <h4>Fayl</h4>
+                            <div class="file-upload">
+                                <div class="file-select">
+                                  <div class="file-select-button" id="fileName">Fayl seçin</div>
+                                  <div class="file-select-name" id="noFile">Seçilmiş fayl yoxdur...</div> 
+                                  <input type="file" name="chooseFile" id="chooseFile">
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+
