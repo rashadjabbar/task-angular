@@ -1,0 +1,147 @@
+.ordersHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ordersHeader>div {
+    width: 100%;
+}
+
+.card-section {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 15px;
+}
+
+.sectionTitle {
+    padding: 14px 20px;
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2f3542;
+}
+
+.card-section hr {
+    margin: 0;
+    color: #747d8c;
+}
+
+.textField {
+    width: 35%;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    height: 32px;
+    border-radius: 5px;
+    padding: 3px 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.neworder {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 9px;
+    margin-right: 18px;
+    height: 35px;
+    background-color: #3ea868;
+    color: white;
+}
+
+.statusslct {
+    border: none;
+    outline: none;
+    margin: 0 18px 0 2px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.fa-angle-down {
+    position: absolute;
+    margin-left: -92px;
+    margin-top: 22px;
+}
+
+.orderTable {
+    width: 100%;
+}
+
+.orderTable .tableHead {
+    height: 40px;
+    background-color: #f1f2f6;
+}
+
+.orderTable .tableHead th {
+    font-weight: 600;
+    padding-left: 20px;
+    opacity: 0.7;
+}
+
+.orderTable .tableBody tr {
+    height: 40px;
+}
+
+.orderTable .tableBody td {
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.check {
+    color: #3ea868;
+}
+
+.times {
+    color: red;
+}
+
+.times i {
+    padding-right: 4px;
+}
+
+.fa-eye {
+    color: #0097e6;
+    cursor: pointer;
+}
+
+.fa-eye::after{
+    content: "|";
+    color: black;
+    opacity: 0.6;
+    margin-left: 8px;
+
+}
+
+.fa-pen {
+    color: #3ea868;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.fa-pen::after{
+    content: "|";
+    color: black;
+    opacity: 0.6;
+    margin-left: 8px;
+
+}
+
+.fa-trash {
+    color: red;
+    margin-left: 8px;
+cursor: pointer;
+}
+
+.bds{
+    width: 10%;
+}
+
+.orderFooter{
+    padding: 14px 20px;
+}

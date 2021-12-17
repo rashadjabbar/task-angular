@@ -55,6 +55,11 @@
     margin: 10px 0;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 #Checkbox {
     display: none;
@@ -85,7 +90,7 @@
 
 .label-name {
     position: absolute;
-    top: 7px;
+    top: 8px;
     left: 20px;
     font-family: 'Montserrat', sans-serif;
     -webkit-transition-property: left;
@@ -277,11 +282,65 @@
 }
 /* Checkbox4 END*/
 
+/* Checkbox5 */
+#Checkbox5 {
+    display: none;
+}
+
+#Checkbox5+label {
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+    padding: 18px;
+    width: 6.9em;
+    margin-right: 10px;
+    background: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    cursor: pointer;
+}
+
+#Checkbox5+label:hover {
+    background: #e4e4e4;
+}
+
+#Checkbox5:checked+label {
+    background: #3ea868;
+    color: #f0f0f0;
+    animation: btn-color 0.5s ease-in-out;
+}
+
+#Checkbox5:checked+label span.label-name {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#Checkbox5:checked+label div.checkmark {
+    display: block;
+    fill: #f0f0f0;
+}
+/* Checkbox5 END*/
+
 
 .part3 h4{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     margin: 0 0 10px 0!important;
+}
+
+.part3 span{
+    color: #3ea868;
+    cursor: pointer;
+}
+
+.part3 .fa-trash{
+    position: absolute;
+    right: 51%;
+    margin-top: 9px;
+    color: #e84118;
+    cursor: pointer;
 }
 
 .docType{
@@ -416,4 +475,61 @@
     line-height: 40px;
     display: inline-block;
     padding: 0 10px;
+}
+
+.textareaField{
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    padding: 6px 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.save{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 35px;
+    background-color: #3ea868;
+    color: white;
+    margin-bottom: 13px;
+}
+
+.back{
+    border: 1px solid #747d8c;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 35px;
+    background-color: transparent;
+    color: #3c4047;
+}
+
+.info{
+    margin-bottom: 10px;
+}
+
+.info p{
+    margin: 0;
+    font-weight: 600;
+}
+
+.info span{
+    color: #666666;
+}
+
+.price-div{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.price{
+    font-weight: 600;
+    margin-right: 13px;
+    margin-top: -7px;
 }

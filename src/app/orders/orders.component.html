@@ -1,3 +1,69 @@
-<p>
-  orders works!
-</p>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card-section">
+      <div class="ordersHeader">
+        <div>
+          <h3 class="sectionTitle">Sifarişlər</h3>
+        </div>
+        <div style="text-align: end;">
+          <span style="opacity: 0.7;">Status:</span>
+          <select name="" id="" class="statusslct">
+            <option value="" style="cursor: pointer;">Hamısı</option>
+            <option value="">Ödənilib</option>
+            <option value="">Ödənilməyib</option>
+          </select>
+          <i class="far fa-angle-down"></i>
+          <input type="text" placeholder="Axtarış et..." class="textField">
+          <button class="neworder" routerLink="/addorder">+ Yeni sifariş</button>
+        </div>
+      </div>
+      <hr>
+      <table class="orderTable">
+        <thead class="tableHead">
+          <tr>
+            <th>SƏNƏD №</th>
+            <th>TARİX</th>
+            <th>MÜŞTƏRİ</th>
+            <th>GB №</th>
+            <th>MƏBLƏĞ</th>
+            <th>STATUS</th>
+            <th>B/D/S</th>
+          </tr>
+        </thead>
+        <tbody class="tableBody">
+          <tr>
+            <td>13467952</td>
+            <td>22.03.2021</td>
+            <td>Uniser Group</td>
+            <td>749652</td>
+            <td>459 azn</td>
+            <td class="check"><i class="far fa-check"></i> Ödənilib</td>
+            <td class="bds">
+              <i class="fal fa-eye"></i>
+              <i class="fal fa-pen"></i>
+              <i class="fal fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>13467952</td>
+            <td>22.03.2021</td>
+            <td>Uniser Group</td>
+            <td>749652</td>
+            <td>459 azn</td>
+            <td class="times"><i class="fal fa-times"></i> Ödənilməyib</td>
+            <td>
+              <i class="fal fa-eye"></i>
+              <i class="fal fa-pen"></i>
+              <i class="fal fa-trash"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+      <div class="orderFooter">
+        <span style="font-weight: 500; opacity: 0.7; padding-right: 10px;">Göstərilir: </span>
+        <span>12 </span><span style="font-weight: 500; opacity: 0.7;">nəticədən </span><span>4</span><span></span>
+      </div>
+    </div>
+  </div>
+</div>

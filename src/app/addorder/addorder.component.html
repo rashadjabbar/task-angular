@@ -3,20 +3,21 @@
         <div class="card-section">
             <h3 class="sectionTitle">Yeni sifariş</h3>
             <hr>
-            <form class="form-section">
+            <form class="form-section" >
                 <div class="part1">
                     <div class="part1child">
-                        <input type="text" class="textField" placeholder="Sənəd №">
-                        <input type="text" class="textField" placeholder="Xidmət məbləği">
+                        <input type="number" class="textField" placeholder="Sənəd №">
+                        <input type="number" class="textField" placeholder="Xidmət məbləği" >
                     </div>
                     <div class="verticalHr"></div>
                     <div class="part1child">
-                        <input type="text" class="textField" placeholder="Müştəri adı">
-                        <input type="text" class="textField" placeholder="Sifarişin tarixi">
+                        <input type="text"  class="textField" placeholder="Müştəri adı">
+                        <input type="text" class="textField" [cleave]="{date: true, delimiter: '.'}" placeholder="Sifarişin tarixi (gg.aa.iiii)">
+
                     </div>
                     <div class="verticalHr"></div>
                     <div class="part1child">
-                        <input type="text" class="textField" placeholder="GB №">
+                        <input type="number" class="textField" placeholder="GB №">
                         <input type="text" class="textField" placeholder="Nəqliyyat növü">
                     </div>
                 </div>
@@ -56,7 +57,7 @@
                     </label>
                 </div>
                 <hr>
-                <div class="part3 mt-3">
+                <div class="part3 pb-3 mt-3">
                     <div class="row">
                         <div class="col-6">
                             <h4>Sənəd növü</h4>
@@ -66,22 +67,67 @@
                                 <option value="">Məhsulun aktlaşdırılması</option>
                             </select>
                             <i class="fal fa-angle-down"></i>
+                            <div *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+                                <select class="docType" name="" id="">
+                                    <option value="" selected disabled>Sənəd seçin</option>
+                                    <option value="">Qısa idxal bəyannaməsi</option>
+                                    <option value="">Məhsulun aktlaşdırılması</option>
+                                </select>
+                                <i class="fal fa-angle-down"></i>
+                                <i class="far fa-trash" (click)="removeQuantity(i)"></i>
+                            </div>
                         </div>
                         <div class="col-6">
                             <h4>Fayl</h4>
                             <div class="file-upload">
                                 <div class="file-select">
-                                  <div class="file-select-button" id="fileName">Fayl seçin</div>
-                                  <div class="file-select-name" id="noFile">Seçilmiş fayl yoxdur...</div> 
-                                  <input type="file" name="chooseFile" id="chooseFile">
+                                    <div class="file-select-button fileName">Fayl seçin</div>
+                                    <div class="file-select-name noFile">Seçilmiş fayl yoxdur...</div>
+                                    <input type="file" name="chooseFile" class="chooseFile" (change)="upload($event)">
                                 </div>
-                              </div>
+                            </div>
+
                         </div>
+                    </div>
+                    <span (click)="addQuantity()">+ Əlavə sənəd</span>
+
+                </div>
+                <hr>
+                <textarea class="textareaField" placeholder="Qeyd" rows="4" name="" id=""></textarea>
+                <div class="price-div">
+                    <span class="price">Xidmət haqqı:</span>
+                    <div>
+                        <input type="checkbox" id="Checkbox5" name="Checkbox5">
+                        <label for="Checkbox5">
+                            <span class="label-name">Ödənilib</span>
+                            <div class="checkmark">
+                                <i class="fal fa-check-circle"></i>
+                            </div>
+                        </label>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    <div class="col-lg-2"></div>
+    <div class="col-lg-2">
+        <button class="save">Yadda saxla</button>
+        <button class="back" routerLink="/orders">Geri</button>
+        <hr>
+        <div class="info">
+            <p>Sənəd nömrəsi</p>
+            <span>134679528</span>
+        </div>
+        <div class="info">
+            <p>Müştəri</p>
+            <span>Uniser Group</span>
+        </div>
+        <div class="info">
+            <p>Tarix</p>
+            <span>17.12.2021</span>
+        </div>
+        <div class="info">
+            <p>Xidmət məbləği</p>
+            <span>Qiymət təyin olunmayıb</span>
+        </div>
+    </div>
 </div>
-
