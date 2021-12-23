@@ -9,7 +9,7 @@
 
                     <div class="part1child">
                         <input type="number" class="textField" [(ngModel)]="newOrders.orderDocNum" name="orderDocNum"
-                            placeholder="Sənəd №" required="required">
+                            placeholder="Sənəd №" required>
                         <input type="number" class="textField" [(ngModel)]="newOrders.orderPrice" name="orderPrice"
                             placeholder="Xidmət məbləği" required>
                     </div>
@@ -91,7 +91,7 @@
 
                             <div *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
 
-                                <select class="docType" name="orderDocId" id="" [(ngModel)]="newOrders.orderDocId">
+                                <select class="docType" name="orderDocId" id="" >
                                     <option selected disabled>Sənəd seçin</option>
                                     <option *ngFor="let item of docs" [ngValue]="item.documentId">{{item.documentName}}
                                     </option>

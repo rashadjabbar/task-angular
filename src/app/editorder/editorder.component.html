@@ -78,7 +78,7 @@
                             </select>
                             <i class="fal fa-angle-down"></i>
                             <div *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
-                                <select class="docType" name="orderDocId" id="" [(ngModel)]="editOrder.orderDocId">
+                                <select class="docType" name="orderDocId" id="" >
                                     <option selected disabled>Sənəd seçin</option>
                                     <option *ngFor="let item of docs" [ngValue]="item.documentId">{{item.documentName}}
                                     </option>
