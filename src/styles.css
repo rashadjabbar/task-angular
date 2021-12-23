@@ -18,6 +18,10 @@ body {
     font-size: .875rem;
     font-family: 'Montserrat', sans-serif!important;
   }
+
+  h3{
+    margin: 0!important;
+  }
   
   .sidebar {
     position: fixed;

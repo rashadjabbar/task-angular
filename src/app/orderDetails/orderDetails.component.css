@@ -25,11 +25,11 @@
     width: 100%;
     border: none;
     outline: none;
-    height: 32px;
+    height: 20px;
     border-radius: 5px;
     margin-bottom: 13px;
-    padding: 3px 10px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 0;
+    box-shadow: none;
 }
 
 .part1 {
@@ -39,11 +39,14 @@
 
 .part1child {
     padding: 0 2%;
-    width: 33%;
+}
+
+.part1child span{
+    font-weight: 600;
 }
 
 .verticalHr {
-    height: 77px;
+    height: 120px;
     width: 0.1em;
     background-color: rgba(0, 0, 0, 0.17);
 }
@@ -328,7 +331,7 @@ input[type=number]::-webkit-inner-spin-button {
 .part3 h4{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    margin: 0 0 10px 0!important;
+    margin: 0!important;
 }
 
 .part3 span{
@@ -348,21 +351,13 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100%;
     border: none;
     outline: none;
-    height: 32px;
     border-radius: 5px;
     margin-bottom: 13px;
-    padding: 3px 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: none;
 }
 
-.fa-angle-down{
-    position: absolute;
-    right: 50%;
-    margin-top: 10px;
-    color: #3ea868;
-}
 
 .file-upload {
     display: block;
@@ -478,15 +473,20 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 0 10px;
 }
 
+.note{
+    font-weight: 600;
+    position: absolute;
+    line-height: 40px;
+}
+
 .textareaField{
     width: 100%;
     border: none;
     outline: none;
-    margin-top: 20px;
     border-radius: 5px;
+    margin-top: 33px;
     margin-bottom: 13px;
-    padding: 6px 10px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: none;
 }
 
 .save{
@@ -542,26 +542,4 @@ input[type=number]::-webkit-inner-spin-button {
     font-weight: 500!important;
     background-color: #3ea868!important;
     border-radius: 8px!important;
-
-}
-
-.choseFile{
-    color: #444!important;
-    position: absolute;
-    left: 20%;
-    margin-top: 6px;
-    margin-left: 3px;
-    z-index: 1;
-}
-
-.part1child div small{
-    position: absolute;
-    margin-left: 12%;
-    margin-top: 6px;
-    color: red;
-}
-
-
-input.ng-invalid{
-    border-left: 5px solid red;
 }

@@ -1,0 +1,136 @@
+<div class="row">
+    <div class="col-lg-10">
+        <div class="card-section">
+            <h3 class="sectionTitle">Sifarişə baxış</h3>
+            <hr>
+            <form class="form-section">
+                <div class="part1">
+                    <div class="part1child">
+                        <span>Sənəd nömrəsi</span>
+                        <input type="number" class="textField" min="1" max="8" [(ngModel)]="editOrder.orderDocNum"
+                            name="orderDocNum" placeholder="Sənəd №" readonly>
+
+                        <span>Xidmət məbləği</span>
+                        <input type="number" class="textField" [(ngModel)]="editOrder.orderPrice" name="orderPrice"
+                            placeholder="Xidmət məbləği" readonly>
+                    </div>
+                    <div class="verticalHr"></div>
+                    <div class="part1child">
+                        <span>Müştəri adı</span>
+                        <input type="text" class="textField" [(ngModel)]="editOrder.orderCusName"
+                            placeholder="Müştəri adı" name="orderCusName" readonly>
+
+                        <span>Sifarişin tarixi</span>
+                        <input type="text" class="textField" [(ngModel)]="editOrder.orderDate" name="orderDate"
+                            [cleave]="{date: true, delimiter: '.'}" placeholder="Sifarişin tarixi (gg.aa.iiii)"
+                            readonly>
+
+                    </div>
+                    <div class="verticalHr"></div>
+                    <div class="part1child">
+                        <span>GB №</span>
+                        <input type="number" class="textField" [(ngModel)]="editOrder.orderGbnum" name="orderGbnum"
+                            placeholder="GB №" readonly>
+
+                        <span>Nəqliyyat növü</span>
+                        <input type="text" class="textField" [(ngModel)]="editOrder.orderTrafficType"
+                            name="orderTrafficType" placeholder="Nəqliyyat növü" readonly>
+                    </div>
+                </div>
+                <div class="part2">
+                    <h4>Xidmətlər</h4>
+
+                    <input type="checkbox" id="Checkbox" [(ngModel)]="editOrder.orderSerCheck1" name="orderSerCheck1"
+                        name="Checkbox" disabled>
+                    <label for="Checkbox">
+                        <span class="label-name">Qısa idxal bəyannaməsinin yazılması</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+
+                    <input type="checkbox" id="Checkbox2" [(ngModel)]="editOrder.orderSerCheck2" name="orderSerCheck2"
+                        name="Checkbox2" disabled>
+                    <label for="Checkbox2">
+                        <span class="label-name">Broker xidməti</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+
+                    <input type="checkbox" id="Checkbox3" [(ngModel)]="editOrder.orderSerCheck3" name="orderSerCheck3"
+                        name="Checkbox3" disabled>
+                    <label for="Checkbox3">
+                        <span class="label-name">İdxal bəyannaməsinin yazılması</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+
+                    <input type="checkbox" id="Checkbox4" [(ngModel)]="editOrder.orderSerCheck4" name="orderSerCheck4"
+                        name="Checkbox4 " disabled>
+                    <label for="Checkbox4">
+                        <span class="label-name">Digər</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+                </div>
+                <hr>
+                <div class="part3 pb-3 mt-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>Sənəd növü</h4>
+                            <select class="docType" name="orderDocId" id="" [(ngModel)]="editOrder.orderDocId" aria-readonly="true">
+                                <option *ngFor="let item of docs" selected disabled [ngValue]="item.documentId">{{item.documentName}}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <h4>Fayl</h4>
+                            <div class="file-upload">
+                                <input type="text" class="textField" name="fileName" #fileName [(ngModel)]="editOrder.orderFile" readonly>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <span class="note">Qeyd</span>
+                <textarea class="textareaField" placeholder="Qeyd" [(ngModel)]="editOrder.orderNote" rows="3"
+                    name="orderNote" id="" readonly></textarea>
+                <div class="price-div">
+                    <span class="price">Xidmət haqqı:</span>
+                    <input type="checkbox" [(ngModel)]="editOrder.orderPriceStat" id="Checkbox5" name="Checkbox5" disabled>
+                    <label for="Checkbox5">
+                        <span class="label-name">Ödənilib</span>
+                        <div class="checkmark">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <button class="save mt-4" [routerLink]="['/orders/editorder', editOrder.orderId]" >Redaktə et</button>
+        <button class="back" routerLink="/orders">Geri</button>
+        <hr>
+        <div class="info">
+            <p>Sənəd nömrəsi</p>
+            <input [(ngModel)]="editOrder.orderDocNum" readonly>
+        </div>
+        <div class="info">
+            <p>Müştəri</p>
+            <input [(ngModel)]="editOrder.orderCusName" readonly>
+        </div>
+        <div class="info">
+            <p>Tarix</p>
+            <input [(ngModel)]="editOrder.orderDate" readonly>
+        </div>
+        <div class="info">
+            <p>Xidmət məbləği</p>
+            <input [(ngModel)]="editOrder.orderPrice" readonly>
+        </div>
+    </div>
+</div>

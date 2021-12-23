@@ -7,20 +7,21 @@
         </div>
         <div style="text-align: end;">
           <span style="opacity: 0.7;">Status:</span>
-          <select name="" id="" class="statusslct">
+          <select name="" #selectId (change)="statChange(selectId.value)" class="statusslct">
             <option value="" style="cursor: pointer;">Hamısı</option>
-            <option value="">Ödənilib</option>
-            <option value="">Ödənilməyib</option>
+            <option value="1">Ödənilib</option>
+            <option value="0">Ödənilməyib</option>
           </select>
           <i class="far fa-angle-down"></i>
-          <input type="text" placeholder="Axtarış et..." class="textField">
-          <button class="neworder" routerLink="/addorder">+ Yeni sifariş</button>
+          <input type="text" placeholder="Axtarış et..." class="textField" [(ngModel)]="searchText">
+          <button class="neworder"  [routerLink]="['/orders/addorder']" routerLinkActive="router-link-active" >+ Yeni sifariş</button>
         </div>
       </div>
       <hr>
       <table class="orderTable">
         <thead class="tableHead">
           <tr>
+            <th>ID</th>
             <th>SƏNƏD №</th>
             <th>TARİX</th>
             <th>MÜŞTƏRİ</th>
@@ -31,39 +32,50 @@
           </tr>
         </thead>
         <tbody class="tableBody">
-          <tr>
-            <td>13467952</td>
-            <td>22.03.2021</td>
-            <td>Uniser Group</td>
-            <td>749652</td>
-            <td>459 azn</td>
-            <td class="check"><i class="far fa-check"></i> Ödənilib</td>
+          <tr *ngFor="let item of orders | filter: searchText |  paginate : { itemsPerPage: 6, currentPage: p }">
+            <td style="display: none;">{{item.orderId}}</td>
+            <td>{{orders.indexOf(item) + 1}}</td>
+            <td>{{item.orderDocNum}}</td>
+            <td>{{item.orderDate}}</td>
+            <td>{{item.orderCusName}}</td>
+            <td>{{item.orderGbnum}}</td>
+            <td>{{item.orderPrice}} ₼</td>
+            <div [ngSwitch]="item.orderPriceStat">
+              <div *ngSwitchCase="true">
+                <td class="check"><i class="far fa-check"></i> Ödənilib</td>
+              </div>
+              <div *ngSwitchCase="false">
+                <td class="times"><i class="fal fa-times"></i> Ödənilməyib</td>
+              </div>
+            </div>
             <td class="bds">
-              <i class="fal fa-eye"></i>
-              <i class="fal fa-pen"></i>
-              <i class="fal fa-trash"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>13467952</td>
-            <td>22.03.2021</td>
-            <td>Uniser Group</td>
-            <td>749652</td>
-            <td>459 azn</td>
-            <td class="times"><i class="fal fa-times"></i> Ödənilməyib</td>
-            <td>
-              <i class="fal fa-eye"></i>
-              <i class="fal fa-pen"></i>
-              <i class="fal fa-trash"></i>
+              <i class="fal fa-eye" [routerLink]="['/orders/orderDetails', item.orderId]"></i>
+              <i class="fal fa-pen" [routerLink]="['/orders/editorder', item.orderId]"></i>
+              <i class="fal fa-trash" 
+                  mwlConfirmationPopover
+                  [popoverTitle]="popoverTitle"
+                  [popoverMessage]="popoverMessage"
+                  placement="left"
+                  (confirm)="removecol(item.orderId)"
+                  (cancel)="cancelClicked = true" ></i>
+              
+              <!-- (click)="removecol(item.orderId)" -->
             </td>
           </tr>
         </tbody>
       </table>
       <hr>
+
       <div class="orderFooter">
-        <span style="font-weight: 500; opacity: 0.7; padding-right: 10px;">Göstərilir: </span>
-        <span>12 </span><span style="font-weight: 500; opacity: 0.7;">nəticədən </span><span>4</span><span></span>
+        <div class="orderLeft">
+          <span style="font-weight: 500; opacity: 0.7; padding-right: 10px;">Ümumi nəticə sayı: </span>
+          <span>{{totalCount}} </span>
+        </div>
+        <div class="orderRight">
+          <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

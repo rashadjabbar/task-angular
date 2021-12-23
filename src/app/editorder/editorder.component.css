@@ -39,7 +39,6 @@
 
 .part1child {
     padding: 0 2%;
-    width: 33%;
 }
 
 .verticalHr {
@@ -542,26 +541,4 @@ input[type=number]::-webkit-inner-spin-button {
     font-weight: 500!important;
     background-color: #3ea868!important;
     border-radius: 8px!important;
-
-}
-
-.choseFile{
-    color: #444!important;
-    position: absolute;
-    left: 20%;
-    margin-top: 6px;
-    margin-left: 3px;
-    z-index: 1;
-}
-
-.part1child div small{
-    position: absolute;
-    margin-left: 12%;
-    margin-top: 6px;
-    color: red;
-}
-
-
-input.ng-invalid{
-    border-left: 5px solid red;
 }

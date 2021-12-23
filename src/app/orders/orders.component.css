@@ -95,10 +95,13 @@ select {
 
 .check {
     color: #3ea868;
+    line-height: 40px;
 }
 
 .times {
     color: red;
+    line-height: 40px;
+
 }
 
 .times i {
@@ -110,7 +113,7 @@ select {
     cursor: pointer;
 }
 
-.fa-eye::after{
+.fa-eye::after {
     content: "|";
     color: black;
     opacity: 0.6;
@@ -124,7 +127,7 @@ select {
     cursor: pointer;
 }
 
-.fa-pen::after{
+.fa-pen::after {
     content: "|";
     color: black;
     opacity: 0.6;
@@ -135,13 +138,147 @@ select {
 .fa-trash {
     color: red;
     margin-left: 8px;
-cursor: pointer;
+    cursor: pointer;
 }
 
-.bds{
+.bds {
     width: 10%;
 }
 
-.orderFooter{
+.orderFooter {
+    display: flex;
+    justify-content: space-between;
     padding: 14px 20px;
+}
+
+.orderLeft {
+    width: 100%;
+}
+
+.orderRight {
+    width: 100%;
+    padding: 0 20px;
+    text-align: end;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    border-radius: 5px;
+    background: #3ea868;
+    border: 1px solid transparent;
+}
+
+.my-pagination /deep/ .ngx-pagination li a:hover {
+    border-radius: 5px;
+    background-color: #dfe6e9;
+}
+
+.my-pagination /deep/ .ngx-pagination li {
+    border: 1px solid #c8d6e5;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous a {
+    position: absolute;
+    visibility: hidden;
+}
+
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous a::before {
+    font-family: "Font Awesome 5 Pro";
+    content: '\f053';
+    position: absolute;
+    color: #576574;
+    top: -15px;
+    left: 5px;
+    margin-left: -20px;
+    visibility: visible;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous.disabled {
+    position: absolute;
+    visibility: hidden;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous.disabled::before {
+    font-family: "Font Awesome 5 Pro";
+    content: '\f053';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    margin-left: -20px;
+    visibility: visible;
+
+}
+
+
+.my-pagination /deep/ .ngx-pagination .pagination-next a {
+    position: absolute;
+    visibility: hidden;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-next a::before {
+    font-family: "Font Awesome 5 Pro";
+    content: '\f054';
+    position: absolute;
+    color: #576574;
+    top: -15px;
+    left: 24px;
+    margin-left: -20px;
+    visibility: visible;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-next.disabled {
+    position: absolute;
+    visibility: hidden;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-next.disabled::before {
+    font-family: "Font Awesome 5 Pro";
+    content: '\f054';
+    position: absolute;
+    top: 3px;
+    left: 24px;
+    margin-left: -20px;
+    visibility: visible;
+}
+
+/deep/ .popover-body p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/deep/ .popover-header {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/deep/ .confirm-btns {
+    font-family: 'Montserrat', sans-serif !important;
+    width: 75%;
+}
+
+/deep/ .confirm-btns button:focus{
+    box-shadow: none!important;
+}
+
+/deep/ .btn-danger{
+    background-color: #3ea868!important;
+    border-color: #3ea868!important;
+}
+
+/deep/ .alertify-notifier .ajs-success{
+    background-color: #3ea868!important;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+/deep/ .alertify-notifier .ajs-error{
+    background-color: red!important;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
