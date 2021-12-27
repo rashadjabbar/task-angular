@@ -31,9 +31,8 @@ export class AddorderComponent implements OnInit {
       name: '',
       quantities: this.fb.array([]),
     });
+    
   }
-
-
 
   ngOnInit() {
     this.docsService.getDocs().subscribe((doc: Documents[]) => {
@@ -41,8 +40,17 @@ export class AddorderComponent implements OnInit {
     });
   }
 
-  price: boolean = true;
-
+  // editForm = new FormGroup({
+  //   orderDocNum: new FormControl('' , [Validators.required]),
+  //   orderPrice: new FormControl('' , [Validators.required]),
+  //   orderCusName: new FormControl('' , [Validators.required]),
+  //   orderDate: new FormControl('' , [Validators.required]),
+  //   orderGbnum: new FormControl('' , [Validators.required]),
+  //   orderTrafficType: new FormControl('' , [Validators.required]),
+  //   orderDocId: new FormControl('' , [Validators.required]),
+  //   orderFile: new FormControl('' , [Validators.required]),
+  // })
+  
 
   upload(event: Event) {
     var filename: any = $(".chooseFile").val();
@@ -83,7 +91,6 @@ export class AddorderComponent implements OnInit {
 
   addOrder(){
 
-    // this.newOrders.orderFile = valueInput;
 
     this.orderService.addOrder(this.newOrders).subscribe((success: any) => {
       this.alertify.succes("Sifariş uğurla əlavə olundu");

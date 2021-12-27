@@ -258,27 +258,78 @@ select {
     width: 75%;
 }
 
-/deep/ .confirm-btns button:focus{
-    box-shadow: none!important;
+/deep/ .confirm-btns button:focus {
+    box-shadow: none !important;
 }
 
-/deep/ .btn-danger{
-    background-color: #3ea868!important;
-    border-color: #3ea868!important;
+/deep/ .btn-danger {
+    background-color: #3ea868 !important;
+    border-color: #3ea868 !important;
 }
 
-/deep/ .alertify-notifier .ajs-success{
-    background-color: #3ea868!important;
+/deep/ .alertify-notifier .ajs-success {
+    background-color: #3ea868 !important;
     border-radius: 10px;
     color: white;
     font-weight: 500;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
-/deep/ .alertify-notifier .ajs-error{
-    background-color: red!important;
+/deep/ .alertify-notifier .ajs-error {
+    background-color: red !important;
     border-radius: 10px;
     color: white;
     font-weight: 500;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+/deep/ button.btn.btn-block.btn-outline-secondary {
+    color: white;
+    transition: 0.3s;
+}
+
+/deep/ button.btn.btn-block.btn-outline-secondary:hover {
+    background-color: #0097e6;
+    color: #0097e6;
+}
+
+/deep/ button.btn.btn-block.btn-outline-secondary::after {
+    content: 'Ləğv et';
+    color: #2f3542;
+    position: absolute;
+    margin-left: -56px;
+    transition: 0.3s;
+
+}
+
+/deep/ button.btn.btn-block.btn-outline-secondary:hover::after{
+    color: white!important;
+}
+
+/* CONFIRM TEXT */
+
+/deep/ button.btn.btn-block.btn-danger {
+    width: 70px;
+    color: #3ea868;
+    transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/deep/ button.btn.btn-block.btn-danger:hover {
+    background-color: #0097e6!important;
+    color: #0097e6;
+}
+
+/deep/ button.btn.btn-block.btn-danger::after {
+    content: 'Bəli';
+    color: white;
+    position: absolute;
+    margin-left: -60px;
+    transition: 0.3s;
+
+}
+
+/deep/ button.btn.btn-block.btn-danger:hover::after{
+    color: white!important;
 }

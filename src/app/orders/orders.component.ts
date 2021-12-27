@@ -19,9 +19,6 @@ export class OrdersComponent implements OnInit {
   searchText: string = '';
 
   totalCount: any;
-  mySubject: any;
-
-  x: any;
 
   popoverTitle = 'Təsdiq formu';
   popoverMessage = 'Bu sətri silmək istədiyinizdən əminsiniz?';
@@ -29,8 +26,7 @@ export class OrdersComponent implements OnInit {
   cancelClicked = false;
 
   constructor(private orderService: OrderService,
-    private alertify: AlertifyService,
-    public dialog: MatDialog) { }
+    private alertify: AlertifyService,) { }
 
   ngOnInit() {
 
@@ -38,9 +34,10 @@ export class OrdersComponent implements OnInit {
       return (this.orders = data);
     });
 
-    this.orderService.getOrders().subscribe((x: string | any[]) => {
-      this.totalCount = x.length;
-    })
+    this.orderService.getOrders().subscribe((data: Orders[]) => {
+      this.totalCount = data.length
+    });
+
   }
 
   statChange(id: string) {
@@ -74,6 +71,5 @@ export class OrdersComponent implements OnInit {
 
 
   }
-
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormArray, FormBuilder, NgForm } from '@angular/forms';
+import { FormGroup, FormArray, FormBuilder, NgForm, Validators } from '@angular/forms';
 import { AlertifyService } from 'src/services/alertify.service';
 import { Orders } from 'src/models/orders';
 import { Documents } from 'src/models/documents';
@@ -52,6 +52,7 @@ export class EditorderComponent implements OnInit {
     });
   }
 
+
   edit() {
     this.orderServices.editOrder(this.editOrder).subscribe(success => {
       this.alertify.succes("Uğurla düzəliş edildi");
@@ -66,13 +67,13 @@ export class EditorderComponent implements OnInit {
     var filename: any = $(".chooseFile").val();
     if (/^\s*$/.test(filename)) {
       $(".file-upload").removeClass('active');
-      $(".noFile").text("Seçilmiş fayl yoxdur...");
+      $(".noFile").val("Seçilmiş fayl yoxdur...");
       this.alertify.error("Fayl yükləmə uğursuz oldu");
-
     }
     else {
+      $(".fileNameEdit").css("display", "none");
       $(".file-upload").addClass('active');
-      $(".noFile").text(filename.replace("C:\\fakepath\\", ""));
+      $(".noFile").val(filename.replace("C:\\fakepath\\", ""));
       this.alertify.succes("Fayl uğurla əlavə olundu");
     }
   }

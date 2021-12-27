@@ -3,7 +3,7 @@
         <div class="card-section">
             <h3 class="sectionTitle">Sifarişə düzəliş</h3>
             <hr>
-            <form class="form-section">
+            <form class="form-section" >
                 <div class="part1">
                     <div class="part1child">
                         <input type="number" class="textField" min="1" max="8" [(ngModel)]="editOrder.orderDocNum"
@@ -92,10 +92,10 @@
                             <div class="file-upload">
                                 <div class="file-select">
                                     <div class="file-select-button fileName">Fayl seçin</div>
-                                    <div class="file-select-name noFile">Seçilmiş fayl yoxdur...</div>
+                                    <input class="file-select-name noFile" name="orderFile" value="Seçilmiş fayl yoxdur..." [(ngModel)]="editOrder.orderFile">
                                     <input type="file" id="inputFile" name="chooseFile" class="chooseFile"
                                         (change)="upload($event)">
-                                    <input type="hidden" name="fileName" #fileName [(ngModel)]="editOrder.orderFile">
+                                    <input type="hidden" name="fileName" #fileName  class="fileName" [(ngModel)]="editOrder.orderFile">
                                 </div>
                             </div>
 
